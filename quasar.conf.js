@@ -3,7 +3,7 @@
 module.exports = function(ctx) {
   return {
     // app plugins (/src/plugins)
-    plugins: ["axios"],
+    plugins: ["axios", "clientes"],
     css: ["app.styl"],
     extras: [
       ctx.theme.mat ? "roboto-font" : null,
@@ -49,11 +49,16 @@ module.exports = function(ctx) {
         "QTabPane",
         "QRouteTab",
         "QField",
-        "QInput"
+        "QInput",
+        "QTable",
+        "QTh",
+        "QTr",
+        "QTd",
+        "QTableColumns"
       ],
       directives: ["Ripple"],
       // Quasar plugins
-      plugins: ["Notify"]
+      plugins: ["Notify", "LocalStorage", "SessionStorage"]
       // iconSet: ctx.theme.mat ? 'material-icons' : 'ionicons'
       // i18n: 'de' // Quasar language
     },

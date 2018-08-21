@@ -9,25 +9,6 @@
   
   
       </q-tabs>
-  
-      <!-- <q-toolbar
-              color="primary"
-              >
-              <q-btn
-                flat
-                dense
-                round
-                @click="leftDrawerOpen = !leftDrawerOpen"
-                aria-label="Menu"
-              >
-                <q-icon name="menu" />
-              </q-btn>
-      
-              <q-toolbar-title>
-                CRM
-                <div slot="subtitle">Gerenciamento de orçamentos</div>
-              </q-toolbar-title>
-            </q-toolbar> -->
     </q-layout-header>
     <q-page-container>
       <router-view />
@@ -42,7 +23,6 @@ export default {
   name: "MyLayout",
   data() {
     return {
-      leftDrawerOpen: this.$q.platform.is.desktop
     };
   },
   methods: {

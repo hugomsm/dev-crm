@@ -1,13 +1,13 @@
 <template>
-  <div id="q-app">
-    <router-view />
-  </div>
+  <q-page padding>
+    <!-- content -->
+  </q-page>
 </template>
 
 <script>
 export default {
-  name: "App"
-};
+  // name: 'PageName',
+}
 </script>
 
 <style>

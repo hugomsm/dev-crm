@@ -19,6 +19,14 @@ const routes = [
       {
         path: "clientes/cadastroPF",
         component: () => import("pages/cadastroPF.vue")
+      },
+      {
+        path: "clientes/cadastroPJ",
+        component: () => import("pages/cadastroPJ.vue")
+      },
+      {
+        path: "clientes/listaclientes",
+        component: () => import("pages/listaclientes.vue")
       }
     ]
   }
