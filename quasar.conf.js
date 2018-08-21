@@ -47,7 +47,9 @@ module.exports = function(ctx) {
         "QTabs",
         "QTab",
         "QTabPane",
-        "QRouteTab"
+        "QRouteTab",
+        "QField",
+        "QInput"
       ],
       directives: ["Ripple"],
       // Quasar plugins
