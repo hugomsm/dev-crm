@@ -41,7 +41,7 @@ export default {
       tableDataPJ: [],
       columnsPJ: [
         {
-          name: "desc",
+          name: "nomeEmpresaJ",
           required: true,
           label: "Nome da Empresa",
           align: "left",
@@ -49,7 +49,7 @@ export default {
           sortable: true
         },
         {
-          name: "desc",
+          name: "nomeClienteJ",
           required: true,
           label: "Nome do Responsável",
           align: "left",
@@ -57,7 +57,7 @@ export default {
           sortable: true
         },
         {
-          name: "desc",
+          name: "cnpjClienteJ",
           required: true,
           label: "CNPJ",
           align: "left",
@@ -66,7 +66,7 @@ export default {
         },
 
         {
-          name: "desc",
+          name: "enderecoClienteJ",
           required: true,
           label: "Endereço",
           align: "left",
@@ -74,7 +74,7 @@ export default {
           sortable: true
         },
         {
-          name: "desc",
+          name: "telefoneClienteJ",
           required: true,
           label: "Telefone",
           align: "left",
@@ -82,7 +82,7 @@ export default {
           sortable: true
         },
         {
-          name: "desc",
+          name: "emailClienteJ",
           required: true,
           label: "E-mail",
           align: "left",
@@ -90,7 +90,7 @@ export default {
           sortable: true
         },
         {
-          name: "desc",
+          name: "obsClienteJ",
           required: true,
           label: "Observações",
           align: "left",
@@ -100,12 +100,11 @@ export default {
       ]
     };
   },
-  beforeMount() {
+  created() {
     // let itens = this.$q.localStorage.get.item(listaClientes);
-    let itens = this.$clientes;
+    var itens = this.$clientes;
     this.tableDataPJ.push(itens);
-    console.log(itens);
-    console.log(tableDataPJ);
+    console.log(this.tableDataPJ);
     // for (let i = 0; i < this.$clientes.lenght; i++) {
     //   if (itens[i].tipo.equals("PF")) {
     //     this.tableDataPF.push(itens[i]);
