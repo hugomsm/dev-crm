@@ -14,13 +14,11 @@ const routes = [
       },
       {
         path: "clientes",
-        component: () => import("pages/clientes"),
-        children: [
-          {
-            path: "cadastroPF",
-            component: () => import("pages/cadastroPF.vue")
-          }
-        ]
+        component: () => import("pages/clientes")
+      },
+      {
+        path: "clientes/cadastroPF",
+        component: () => import("pages/cadastroPF.vue")
       }
     ]
   }

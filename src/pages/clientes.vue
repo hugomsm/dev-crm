@@ -1,24 +1,16 @@
 <template>
-  <q-page padding>
-    <router-view></router-view>
-    <div class='q-title' align='center'>CLIENTES</div>
-    <div>
-      <q-btn to='/clientes/cadastropf'>CADASTRAR PESSOA FÍSICA</q-btn>
-    </div>
-  </q-page>
+  <div>
+    <q-page padding>
+      <div class='q-title' align='center'>CLIENTES</div>
+      <div>
+        <q-btn to='/clientes/cadastropf'>CADASTRAR PESSOA FÍSICA</q-btn>
+      </div>
+    </q-page>
+  </div>
 </template>
 
 <script>
-export default {
-  data() {
-    return {
-      nomeClienteF: "",
-      cpfClienteF: "",
-      enderecoClienteF: "",
-      emailClienteF: ""
-    };
-  }
-};
+export default {};
 </script>
 
 <style>

@@ -1,6 +1,7 @@
 <template>
   <q-page padding>
     <div class='q-title' align='center'>CADASTRO DE PESSOA FÍSICA</div>
+    <q-btn rounded color=primary icon='arrow_back' to='/clientes'>Voltar</q-btn>
     <div>
       <q-field icon="face">
         <q-input clearable="true" v-model="nomeClienteF" float-label="Nome do cliente" />
@@ -20,7 +21,13 @@
       <q-field icon="description">
         <q-input type='textarea' clearable="true" v-model="obsClienteF" float-label="Observações" />
       </q-field>
+      <div align=center>
+          <p><br><q-btn rounded color=primary icon='save' >Salvar</q-btn>
+          <q-btn rounded color=primary icon='delete' @click='clearAll' >Limpar</q-btn>
+              </p>         
+          </div>
     </div>
+    
   </q-page>
 </template>
 
@@ -35,6 +42,16 @@ export default {
       emailClienteF: "",
       obsClienteF: ""
     };
+  },
+  methods: {
+    clearAll() {
+      (this.nomeClienteF = ""),
+        (this.cpfClienteF = ""),
+        (this.enderecoClienteF = ""),
+        (this.telefoneClienteF = ""),
+        (this.emailClienteF = ""),
+        (this.obsClienteF = "");
+    }
   }
 };
 </script>
