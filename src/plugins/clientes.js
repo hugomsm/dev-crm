@@ -1,3 +1,7 @@
 export default ({ Vue }) => {
-  Vue.prototype.$clientes = [];
+  var $clientes = [];
+  
+  new Vue({data:{ clientes: $clientes }});
+  
+  Vue.prototype.$clientes = $clientes;
 };
