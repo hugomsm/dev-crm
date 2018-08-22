@@ -100,18 +100,17 @@ export default {
       ]
     };
   },
-  created() {
-    // let itens = this.$q.localStorage.get.item(listaClientes);
-    var itens = this.$clientes;
-    this.tableDataPJ.push(itens);
-    console.log(this.tableDataPJ);
-    // for (let i = 0; i < this.$clientes.lenght; i++) {
-    //   if (itens[i].tipo.equals("PF")) {
-    //     this.tableDataPF.push(itens[i]);
-    //   } else {
-    //     this.tableDataPJ.push(itens[i]);
-    //   }
-    // }
+  mounted() {
+     for (let i = 0; i < this.$clientes.length; i++) {
+       let c = this.$clientes[i];
+
+       if (c.tipo === "PF") {
+            this.tableDataPF.push(c);
+       } else {
+
+              this.tableDataPJ.push(c);
+      }
+     }
   }
   // name: 'PageName',
 };
