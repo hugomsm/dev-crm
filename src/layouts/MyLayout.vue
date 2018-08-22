@@ -2,10 +2,11 @@
   <q-layout view="lHh Lpr lFf">
     <q-layout-header>
       <q-tabs align='justify'>
-        <q-route-tab default slot="title" to='/' exact name="tab-1" icon="home" label='Home' />
-        <q-route-tab slot="title" to='/produtos' exact name="tab-2" icon="shopping_cart" label='Produtos' />
-        <q-route-tab slot="title" to='/clientes' exact name="tab-3" icon="account_box" label='Clientes' />
-        <q-route-tab slot="title" to='/orcamento' exact name="tab-4" icon="attach_money" label='Orçamento' />
+        <q-route-tab default slot="title" to='/' exact name="tab-1" icon="home"/>
+        <q-route-tab slot="title" to='/fornecedores' exact name="tab-2" icon="shopping_cart" label='Fornecedores' />
+        <q-route-tab slot="title" to='/produtos' exact name="tab-3" icon="shopping_cart" label='Produtos' />
+        <q-route-tab slot="title" to='/clientes' exact name="tab-4" icon="account_box" label='Clientes' />
+        <q-route-tab slot="title" to='/orcamento' exact name="tab-5" icon="attach_money" label='Orçamento' />
   
   
       </q-tabs>
@@ -22,8 +23,7 @@ import { openURL } from "quasar";
 export default {
   name: "MyLayout",
   data() {
-    return {
-    };
+    return {};
   },
   methods: {
     openURL

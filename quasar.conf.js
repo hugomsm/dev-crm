@@ -3,7 +3,7 @@
 module.exports = function(ctx) {
   return {
     // app plugins (/src/plugins)
-    plugins: ["axios", "clientes"],
+    plugins: ["axios", "clientes", "fornecedores", "produtos"],
     css: ["app.styl"],
     extras: [
       ctx.theme.mat ? "roboto-font" : null,
@@ -58,7 +58,7 @@ module.exports = function(ctx) {
       ],
       directives: ["Ripple"],
       // Quasar plugins
-      plugins: ["Notify", "LocalStorage", "SessionStorage"]
+      plugins: ["Notify", "LocalStorage", "SessionStorage", "Dialog"]
       // iconSet: ctx.theme.mat ? 'material-icons' : 'ionicons'
       // i18n: 'de' // Quasar language
     },

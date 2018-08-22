@@ -22,8 +22,8 @@
         <q-input type='textarea' clearable v-model="objCliente[0].obsClienteF" float-label="Observações" />
       </q-field>
       <div align=center>
-          <p><br><q-btn rounded color=primary icon='save' @click='salvarCliente' >Salvar</q-btn>
-          <q-btn rounded color=primary icon='delete' @click='clearAll' >Limpar</q-btn>
+          <p><br><q-btn size='la' rounded color=primary icon='save' @click='salvarCliente' >Salvar</q-btn>
+           &ensp;<q-btn size='la' rounded color=primary icon='delete' @click='confirm.handler()' >Limpar</q-btn>
               </p>         
           </div>
     </div>
@@ -46,7 +46,24 @@ export default {
           emailClienteF: "",
           obsClienteF: ""
         }
-      ]
+      ],
+      confirm: {
+        label: "Confirmar",
+        icon: "warning",
+        handler: () => {
+          this.$q
+            .dialog({
+              title: "Confirmar",
+              message: "Tem certeza que deseja limpar?",
+              ok: "Sim",
+              cancel: "Não"
+            })
+            .then(() => {
+              this.clearAll();
+            })
+            .catch(() => {});
+        }
+      }
     };
   },
   methods: {
@@ -59,9 +76,22 @@ export default {
         (this.objCliente[0].obsClienteF = "");
     },
     salvarCliente() {
-      this.$clientes.push(this.objCliente[0]);
-      console.log(this.objCliente[0]);
-      console.log(this.$clientes);
+      try {
+        this.$clientes.push(this.objCliente[0]);
+        this.$q.notify({
+          message: "Cliente cadastrado com sucesso!",
+          timeout: 2000,
+          type: "positive",
+          color: "positive",
+          textColor: "black",
+          icon: "thumb_up",
+          position: "center"
+        });
+      } catch {
+      } finally {
+      }
+      // console.log(this.objCliente[0]);
+      // console.log(this.$clientes);
       //   this.$q.localStorage.set(listaClientes, this.$clientes);
     }
   },

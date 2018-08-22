@@ -3,18 +3,22 @@
     <q-page padding>
       <div class='q-title' align='center'>CLIENTES</div>
       <div align=center>
-      <br>
-      <div>
-        <q-btn color=secondary to='/clientes/cadastropf'>CADASTRAR PESSOA FÍSICA</q-btn>
-      </div>
-      <br>
-      <div>
-        <q-btn color=orange to='/clientes/cadastropj'>CADASTRAR EMPRESA (PESSOA JURÍDICA)</q-btn>
-      </div>
-      <br>
-      <div>
-        <q-btn color=primary to='/clientes/listaclientes'>LISTA DE CLIENTES</q-btn>
-      </div>
+        <br>
+        <div>
+          <q-btn color=secondary to='/clientes/cadastropf'>CADASTRAR PESSOA FÍSICA</q-btn>
+        </div>
+        <br>
+        <div>
+          <q-btn color=secondary to='/clientes/listaClientesF'>LISTA DE CLIENTES - PESSOA FÍSICA</q-btn>
+        </div>
+        <br>
+        <div>
+          <q-btn color=orange to='/clientes/cadastropj'>CADASTRAR EMPRESA</q-btn>
+        </div>
+        <br>
+        <div>
+          <q-btn color=orange to='/clientes/listaClientesJ'>LISTA DE CLIENTES - EMPRESAS</q-btn>
+        </div>
       </div>
     </q-page>
   </div>

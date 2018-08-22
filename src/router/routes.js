@@ -13,6 +13,18 @@ const routes = [
         component: () => import("pages/orcamento")
       },
       {
+        path: "fornecedores",
+        component: () => import("pages/fornecedores")
+      },
+      {
+        path: "fornecedores/listaFornecedores",
+        component: () => import("pages/listaFornecedores.vue")
+      },
+      {
+        path: "fornecedores/cadastroFornecedor",
+        component: () => import("pages/cadastroFornecedor.vue")
+      },
+      {
         path: "clientes",
         component: () => import("pages/clientes")
       },
@@ -25,8 +37,12 @@ const routes = [
         component: () => import("pages/cadastroPJ.vue")
       },
       {
-        path: "clientes/listaclientes",
-        component: () => import("pages/listaclientes.vue")
+        path: "clientes/listaClientesJ",
+        component: () => import("pages/listaClientesJ.vue")
+      },
+      {
+        path: "clientes/listaClientesF",
+        component: () => import("pages/listaClientesF.vue")
       }
     ]
   }

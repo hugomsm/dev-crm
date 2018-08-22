@@ -9,17 +9,6 @@
     :columns="columnsPF"
     row-key="name"
   />
-
-<div class='q-title' align='center'>
-  LISTA DE PESSOAS JURÍDICAS
-  <q-table
-    title="Lista de Clientes"
-    :data="tableDataPJ"
-    :columns="columnsPJ"
-    row-key="name"
-  />
-</div>
-  
   </q-page>
 </template>
 
@@ -30,89 +19,66 @@ export default {
       tableDataPF: [],
       columnsPF: [
         {
-          name: "desc",
+          name: "nomeClienteF",
           required: true,
           label: "Nome do Cliente",
           align: "left",
           field: "nomeClienteF",
           sortable: true
-        }
-      ],
-      tableDataPJ: [],
-      columnsPJ: [
-        {
-          name: "nomeEmpresaJ",
-          required: true,
-          label: "Nome da Empresa",
-          align: "left",
-          field: "nomeEmpresaJ",
-          sortable: true
         },
         {
-          name: "nomeClienteJ",
+          name: "cnpjClienteF",
           required: true,
-          label: "Nome do Responsável",
+          label: "CPF",
           align: "left",
-          field: "nomeClienteJ",
-          sortable: true
-        },
-        {
-          name: "cnpjClienteJ",
-          required: true,
-          label: "CNPJ",
-          align: "left",
-          field: "cpnjClienteJ",
+          field: "cpfClienteF",
           sortable: true
         },
 
         {
-          name: "enderecoClienteJ",
+          name: "enderecoClienteF",
           required: true,
           label: "Endereço",
           align: "left",
-          field: "enderecoClienteJ",
+          field: "enderecoClienteF",
           sortable: true
         },
         {
-          name: "telefoneClienteJ",
+          name: "telefoneClienteF",
           required: true,
           label: "Telefone",
           align: "left",
-          field: "telefoneClienteJ",
+          field: "telefoneClienteF",
           sortable: true
         },
         {
-          name: "emailClienteJ",
+          name: "emailClienteF",
           required: true,
           label: "E-mail",
           align: "left",
-          field: "emailClienteJ",
+          field: "emailClienteF",
           sortable: true
         },
         {
-          name: "obsClienteJ",
+          name: "obsClienteF",
           required: true,
           label: "Observações",
           align: "left",
-          field: "obsClienteJ",
+          field: "obsClienteF",
           sortable: true
         }
       ]
     };
   },
   mounted() {
-     for (let i = 0; i < this.$clientes.length; i++) {
-       let c = this.$clientes[i];
-
-       if (c.tipo === "PF") {
-            this.tableDataPF.push(c);
-       } else {
-
-              this.tableDataPJ.push(c);
+    for (let i = 0; i < this.$clientes.length; i++) {
+      let c = this.$clientes[i];
+      console.log(c);
+      if (c.tipo === "PF") {
+        this.tableDataPF.push(c);
       }
-     }
+    }
   }
-  // name: 'PageName',
 };
 </script>
 

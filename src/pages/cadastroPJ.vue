@@ -15,7 +15,7 @@
         <q-input type='textarea' clearable v-model="objCliente[0].enderecoClienteJ" float-label="Endereço do cliente" />
       </q-field>
       <q-field icon="phone">
-        <q-input type='tel' v-model="objCliente[0].telefoneClienteJ" v-mask="'(99) 99999-9999'" float-label="Telefone" />
+        <q-input type='tel' clearable v-model="objCliente[0].telefoneClienteJ" v-mask="'(99) 99999-9999'" float-label="Telefone" />
       </q-field>
       <q-field icon="alternate_email">
         <q-input type='email' clearable v-model="objCliente[0].emailClienteJ" float-label="E-mail" />
@@ -25,7 +25,7 @@
       </q-field>
       <div align=center>
           <p><br><q-btn rounded color=primary icon='save' @click='salvarCliente' >Salvar</q-btn>
-          <q-btn rounded color=primary icon='delete' @click='clearAll' >Limpar</q-btn>
+          &ensp;<q-btn rounded color=primary icon='delete' @click='confirm.handler()'>Limpar</q-btn>
               </p>         
           </div>
     </div>
@@ -49,7 +49,24 @@ export default {
           emailClienteJ: "",
           obsClienteJ: ""
         }
-      ]
+      ],
+      confirm: {
+        label: "Confirmar",
+        icon: "warning",
+        handler: () => {
+          this.$q
+            .dialog({
+              title: "Confirmar",
+              message: "Tem certeza que deseja limpar?",
+              ok: "Sim",
+              cancel: "Não"
+            })
+            .then(() => {
+              this.clearAll();
+            })
+            .catch(() => {});
+        }
+      }
     };
   },
   methods: {
@@ -63,9 +80,20 @@ export default {
         (this.objCliente[0].obsClienteJ = "");
     },
     salvarCliente() {
-      this.$clientes.push(this.objCliente[0]);
-      console.log(this.objCliente[0]);
-      console.log(this.$clientes);
+      try {
+        this.$clientes.push(this.objCliente[0]);
+        this.$q.notify({
+          message: "Cliente cadastrado com sucesso!",
+          timeout: 2000,
+          type: "positive",
+          color: "positive",
+          textColor: "black",
+          icon: "thumb_up",
+          position: "center"
+        });
+      } catch {
+      } finally {
+      }
       //   this.$q.localStorage.set(listaClientes, this.$clientes);
     }
   },
