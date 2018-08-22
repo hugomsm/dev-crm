@@ -2,6 +2,7 @@
   <q-page padding>
     <q-btn rounded absolute-top-left color=primary icon='arrow_back' to='/fornecedores'>VOLTAR</q-btn>
 <div class='q-title' align='center'>
+    <br>
   LISTA DE FORNECEDORES
   <q-table
     title="Lista de fornecedores"

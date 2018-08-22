@@ -1,6 +1,6 @@
 <template>
   <q-page padding>
-    <div class='q-title' align='center'> <q-btn round   absolute-top-left  color=primary icon='arrow_back' to='/fornecedores'></q-btn> CADASTRO DE FORNECEDOR</div>
+    <div class='q-title' align='center'> <q-btn round   absolute-top-left  color=primary icon='arrow_back' to='/fornecedores'></q-btn> &ensp;CADASTRO DE FORNECEDOR</div>
     <div>
       <q-field icon="work">
         <q-input clearable v-model="objFornecedor[0].nomeEmpresaJ" float-label="Razão Social" />

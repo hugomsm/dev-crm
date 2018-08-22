@@ -1,6 +1,6 @@
 <template>
   <q-page padding>
-    <div class='q-title' align='center'><q-btn round     color=primary icon='arrow_back' to='/clientes'></q-btn>CADASTRO DE PESSOA FÍSICA</div>
+    <div class='q-title' align='center'><q-btn round     color=primary icon='arrow_back' to='/clientes'></q-btn>&ensp;CADASTRO DE PESSOA FÍSICA</div>
     
     <div>
       <q-field icon="face">

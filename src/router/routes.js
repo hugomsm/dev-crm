@@ -17,6 +17,14 @@ const routes = [
         component: () => import("pages/fornecedores")
       },
       {
+        path: "produtos",
+        component: () => import("pages/produtos")
+      },
+      {
+        path: "produtos/cadastroproduto",
+        component: () => import("pages/cadastroProduto.vue")
+      },
+      {
         path: "fornecedores/listaFornecedores",
         component: () => import("pages/listaFornecedores.vue")
       },
